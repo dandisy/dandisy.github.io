@@ -3,7 +3,7 @@
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
 <head>
-    <title>Laravel Boilerplate | Quick Start</title>
+    <title>Webcore Platform | Quick Start</title>
     <!-- Meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -37,14 +37,14 @@
             <div class="container">
                 <div class="branding">
                     <h1 class="logo">
-                        <a href="../../index.html">
+                        <a href="../index.html">
                             <span aria-hidden="true" class="icon_documents_alt icon"></span>
-                            <span class="text-highlight">Laravel</span><span class="text-bold">Boilerplate</span>
+                            <span class="text-highlight">Webcore</span><span class="text-bold">Platform</span>
                         </a>
                     </h1>
                 </div><!--//branding-->
                 <ol class="breadcrumb">
-                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="../index.html">Home</a></li>
                     <li class="active">Quick Start</li>
                 </ol>
             </div><!--//container-->
@@ -53,7 +53,7 @@
             <div class="container">
                 <div id="doc-header" class="doc-header text-center">
                     <h1 class="doc-title"><i class="icon fa fa-paper-plane"></i> Quick Start</h1>
-                    <div class="meta"><i class="fa fa-clock-o"></i> Last updated: November 20th, 2017</div>
+                    <div class="meta"><i class="fa fa-clock-o"></i> Last updated: February 24th, 2018</div>
                 </div><!--//doc-header-->
                 <div class="doc-body">
                     <div class="doc-content">
@@ -64,66 +64,75 @@
                                     <p>This project is to be served as a basis for a fully fledged web application, it is constantly evolving and has many contributors. It has been converted into many languages, and more are being added every month. As with any project, nothing is perfect, I made this in my spare time and while I have used it for many people, there will always be bugs. If you find a bug please make an issue, also please refrain from making issues that are specific to your project and not the boilerplate. I hope you enjoy all of the hard work I have put into this, I plan on keeping it updated but I will definitely need help if anyone is available to research issues and make pull requests to fix them. Also, don't be insulted if I refactor your code after a pull request, I like to stay organized and keep the flow of the source uniform.</p>
 
                                     <ul>
+                                        <li>Admin Template</li>
+                                        <li>File Manager</li>
+                                        <li>Menu Manager</li>
                                         <li>
-                                            Access Control
+                                            Image Manipulation <br>
+                                            to implement image manipulation use url params, ie http://localhost/webcore/public/img/{path}?{param=value} <br>
+                                            default {path} is configured relative to public_path, <br>
+                                            see .env for <code>FILESYSTEM_DRIVER</code> and config/filesystems.php <br>
+                                            please check <a href="http://glide.thephpleague.com" target="_blank">Glide documentation</a> for manual guide
+                                        </li>
+                                        <li>
+                                            Laravel Generator based on <a href="http://#" target="_blank">Infyom Laravel Generator</a> with Additional features:
                                             <ul>
-                                                <li>Register/Login/Logout/Password Reset</li>
-                                                <li>Third party login (Github/Facebook/Twitter/Google/Linked In/BitBucket)</li>
-                                                <li>Account Confirmation By E-mail</li>
-                                                <li>Resend Confirmation E-mail</li>
-                                                <li>Option for Manual Account Confirmation by Admin</li>
-                                                <li>Login Throttling</li>
-                                                <li>Enable/Disable Registration</li>
-                                                <li>Force Single Session</li>
+                                                <li>Date Time Picker (htmltype = date-picker, time-picker or datetime-picker)</li>
+                                                <li>Select2 (all select input will be select2, for multiple use htmltype = multi-select)</li>
+                                                <li>Two side Multiple Select (htmltype = two-side-select)</li>
+                                                <li>HTML Text Editor (htmltype = text-editor)</li>
+                                                <li>File Manager (htmltype = file-manager or files-manager)</li>
+                                                <li>Nullable field in migration (console option = n, or in json file using dbNullable = true)</li>
+                                                <li>Logged fields : created_by and updated_by (console option = --logs)</li>
+                                                <li>Relational generator : add view model in controller, relational function in model, and relational data in select2 form field (htmltype = select,relation:{view-model}={field-to-show}={field-as-value})</li>
+                                                <li>Component and theme reader generator (htmltype = select,component or select,theme)</li>
+                                                <li>Model reader generator (htmltype = select,model)</li>
+                                            </ul>
+                                            see example of model schema files in resources/model_schemas
+                                        </li>
+                                        <li>
+                                            Page System (support themes, template position and view components) <br>
+                                            Code Sample can be download in <a href="https://github.com/dandisy/themes" target="_blank">https://github.com/dandisy/themes</a>
+                                        </li>
+                                        <li>
+                                            Reusable Component
+                                            <ul>
                                                 <li>
-                                                    Administrator Management
-                                                    <ul>
-                                                        <li>User Index</li>
-                                                        <li>Activate/Deactivate Users</li>
-                                                        <li>Soft &amp; Permanently Delete Users</li>
-                                                        <li>Resend User Confirmation E-mails</li>
-                                                        <li>Change Users Password</li>
-                                                        <li>Create/Manage Roles</li>
-                                                        <li>Manage Users Roles/Permissions</li>
-                                                        <li>"Login As" User</li>
-                                                        <li>Kill User Session</li>
-                                                    </ul>
+                                                    using Widget (Widget Class & Widget View) using arrilot/laravel-widgets for UI Component
+                                                    <br>
+                                                    as much as possible the widget should have a loose coupled, bring data on the fly, avoid directly include / use in widget class
+                                                    <br>
+                                                    webcore include a widget, with this you able to use shortcode on Page description field
+                                                    to get datasource from models, use syntax : <br>
+                                                    [source=ModelName,where=some_field_name:value,position:some_theme_position,widget=some_widget_view]
+                                                </li>
+                                                <li>
+                                                    using Laravel Package <br>
+                                                    webcore include webcore-microsite package as code sample for basic package
                                                 </li>
                                             </ul>
                                         </li>
-                                        <li>Default Responsive Layout</li>
-                                        <li>Frontend and Backend Controllers</li>
-                                        <li>User Dashboard</li>
-                                        <li>Administration Dashboard with <a href="https://coreui.io" target="_blank">CoreUI</a></li>
-                                        <li>Namespaced Routes</li>
-                                        <li>Default Forms Converted to Form Helper Methods</li>
-                                        <li>Master Layout Files with common sections</li>
-                                        <li>Versioned CSS/JS Files</li>
-                                        <li>Helper functions</li>
-                                        <li>Javascript/jQuery Snippets</li>
-                                        <li><a href="http://getbootstrap.com/" target="_blank">Bootstrap 4</a></li>
-                                        <li><a href="http://fontawesome.io/" target="_blank">Font Awesome</a></li>
-                                        <li>Global Messages/Exception Handling</li>
-                                        <li><a href="https://github.com/laravel/socialite" target="_blank">Socialite Integration</a></li>
-                                        <li><a href="https://github.com/letrunghieu/active" target="_blank">Active Menu</a></li>
-                                        <li><a href="https://github.com/ARCANEDEV/LogViewer" target="_blank">ARCANEDEV Log Viewer</A></li>
-                                        <li><a href="https://laravel-breadcrumbs.readthedocs.io/en/latest/index.html" target="_blank">Dynamic Breadcrumbs</a></li>
-                                        <li>Localization with RTL support in 12+ languages so far.</li>
-                                        <li><a href="https://github.com/creativeorange/gravatar" target="_blank">Gravatar</a></li>
-                                        <li><a href="https://github.com/barryvdh/laravel-debugbar" target="_blank">Laravel Debugbar</a></li>
-                                        <li>Event subscribers</li>
-                                        <li><a href="https://github.com/ARCANEDEV/noCAPTCHA" target="_blank">Google reCaptcha</a></li>
-                                        <li>Vue</li>
                                         <li>
-                                            Standards
+                                            Pre Configured Oauth using Laravel Passport (with RESTAPI resources example)
                                             <ul>
-                                                <li>PSR-2</li>
-                                                <li>Clean Controllers</li>
-                                                <li>Repository/Contract Implementations</li>
-                                                <li>Request Classes</li>
-                                                <li>Events/Handlers</li>
-                                                <li>Entire application split between frontend/backend</li>
-                                                <li>Localization Throughout</li>
+                                                <li>
+                                                    to login use http://localhost/webcore/public/oauth/token <br>
+                                                    with params : <br>
+
+                                                    <ul>
+                                                        <li>client_id</li>
+                                                        <li>client_secret</li>
+                                                        <li>grant_type</li>
+                                                        <li>username</li>
+                                                        <li>password</li>
+                                                        <li>scope</li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    to get resources example http://localhost/webcore/public/api/product
+                                                    <br>
+                                                    with header Authorization = Bearer {your-token}
+                                                </li>
                                             </ul>
                                         </li>
                                     </ul>
@@ -136,15 +145,15 @@
                                     <div class="row">
                                         <div class="col-md-6 col-sm-12 col-sm-12">
                                             <div class="screenshot-holder">
-                                                <a href="../assets/images/5.5/1.png" data-title="Home Screen" data-toggle="lightbox" class="hoverZoomLink"><img class="img-responsive" src="../assets/images/5.5/1.png" alt="screenshot"></a>
-                                                <a class="mask hoverZoomLink" href="../assets/images/5.5/1.png" data-title="Home Screen" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
+                                                <a href="https://camo.githubusercontent.com/e3bbc646d6ff473da2dd6cede2c968846a6982a6/68747470733a2f2f61646d696e6c74652e696f2f41646d696e4c5445322e706e67" data-title="Admin Template" data-toggle="lightbox" class="hoverZoomLink"><img class="img-responsive" src="https://camo.githubusercontent.com/e3bbc646d6ff473da2dd6cede2c968846a6982a6/68747470733a2f2f61646d696e6c74652e696f2f41646d696e4c5445322e706e67" alt="screenshot"></a>
+                                                <a class="mask hoverZoomLink" href="https://camo.githubusercontent.com/e3bbc646d6ff473da2dd6cede2c968846a6982a6/68747470733a2f2f61646d696e6c74652e696f2f41646d696e4c5445322e706e67" data-title="Admin Template" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
                                             </div> 
                                         </div>
 
                                         <div class="col-md-6 col-sm-12 col-sm-12">
                                             <div class="screenshot-holder">
-                                                <a href="../assets/images/5.5/9.png" data-title="Built in Macros" data-toggle="lightbox" class="hoverZoomLink"><img class="img-responsive" src="../assets/images/5.5/9.png" alt="screenshot"></a>
-                                                <a class="mask hoverZoomLink" href="../assets/images/5.5/9.png" data-title="Built in Macros" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
+                                                <a href="https://cloud.githubusercontent.com/assets/74367/15646143/77016990-265c-11e6-9ecc-d82ae2c74f71.png" data-title="File Manager" data-toggle="lightbox" class="hoverZoomLink"><img class="img-responsive" src="https://cloud.githubusercontent.com/assets/74367/15646143/77016990-265c-11e6-9ecc-d82ae2c74f71.png" alt="screenshot"></a>
+                                                <a class="mask hoverZoomLink" href="https://cloud.githubusercontent.com/assets/74367/15646143/77016990-265c-11e6-9ecc-d82ae2c74f71.png" data-title="File Manager" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
                                             </div> 
                                         </div>
 
@@ -152,93 +161,8 @@
 
                                         <div class="col-md-6 col-sm-12 col-sm-12">
                                             <div class="screenshot-holder">
-                                                <a href="../assets/images/5.5/3.png" data-title="User Account Management" data-toggle="lightbox" class="hoverZoomLink"><img class="img-responsive" src="../assets/images/5.5/3.png" alt="screenshot"></a>
-                                                <a class="mask hoverZoomLink" href="../assets/images/5.5/3.png" data-title="User Account Management" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
-                                            </div> 
-                                        </div>
-
-                                        <div class="col-md-6 col-sm-12 col-sm-12">
-                                            <div class="screenshot-holder">
-                                                <a href="../assets/images/5.5/8.png" data-title="Frontend Dashboard" data-toggle="lightbox" class="hoverZoomLink"><img class="img-responsive" src="../assets/images/5.5/8.png" alt="screenshot"></a>
-                                                <a class="mask hoverZoomLink" href="../assets/images/5.5/8.png" data-title="Frontend Dashboard" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
-                                            </div> 
-                                        </div>
-
-                                        <div class="clearfix"></div>
-
-                                        <div class="col-md-6 col-sm-12 col-sm-12">
-                                            <div class="screenshot-holder">
-                                                <a href="../assets/images/5.5/7.png" data-title="Backend Dashboard" data-toggle="lightbox" class="hoverZoomLink"><img class="img-responsive" src="../assets/images/5.5/7.png" alt="screenshot"></a>
-                                                <a class="mask hoverZoomLink" href="../assets/images/5.5/7.png" data-title="Backend Dashboard" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
-                                            </div> 
-                                        </div>
-
-                                        <div class="col-md-6 col-sm-12 col-sm-12">
-                                            <div class="screenshot-holder">
-                                                <a href="../assets/images/5.5/5.png" data-title="User Management" data-toggle="lightbox" class="hoverZoomLink"><img class="img-responsive" src="../assets/images/5.5/5.png" alt="screenshot"></a>
-                                                <a class="mask hoverZoomLink" href="../assets/images/5.5/5.png" data-title="User Management" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
-                                            </div> 
-                                        </div>
-
-                                        <div class="clearfix"></div>
-
-                                        <div class="col-md-6 col-sm-12 col-sm-12">
-                                            <div class="screenshot-holder">
-                                                <a href="../assets/images/5.5/6.png" data-title="Create User" data-toggle="lightbox" class="hoverZoomLink"><img class="img-responsive" src="../assets/images/5.5/6.png" alt="screenshot"></a>
-                                                <a class="mask hoverZoomLink" href="../assets/images/5.5/6.png" data-title="Create User" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
-                                            </div> 
-                                        </div>
-
-                                        <div class="col-md-6 col-sm-12 col-sm-12">
-                                            <div class="screenshot-holder">
-                                                <a href="../assets/images/5.5/4.png" data-title="Role Management" data-toggle="lightbox" class="hoverZoomLink"><img class="img-responsive" src="../assets/images/5.5/4.png" alt="screenshot"></a>
-                                                <a class="mask hoverZoomLink" href="../assets/images/5.5/4.png" data-title="Role Management" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
-                                            </div> 
-                                        </div>
-
-                                        <div class="clearfix"></div>
-
-                                        <div class="col-md-6 col-sm-12 col-sm-12">
-                                            <div class="screenshot-holder">
-                                                <a href="../assets/images/5.5/2.png" data-title="Login As User" data-toggle="lightbox" class="hoverZoomLink"><img class="img-responsive" src="../assets/images/5.5/2.png" alt="screenshot"></a>
-                                                <a class="mask hoverZoomLink" href="../assets/images/5.5/2.png" data-title="Login As User" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
-                                            </div> 
-                                        </div>
-
-                                        <div class="col-md-6 col-sm-12 col-sm-12">
-                                            <div class="screenshot-holder">
-                                                <a href="../assets/images/5.5/11.png" data-title="Log Viewer Dashboard" data-toggle="lightbox" class="hoverZoomLink"><img class="img-responsive" src="../assets/images/5.5/11.png" alt="screenshot"></a>
-                                                <a class="mask hoverZoomLink" href="../assets/images/5.5/11.png" data-title="Log Viewer Dashboard" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
-                                            </div> 
-                                        </div>
-
-                                        <div class="clearfix"></div>
-
-                                         <div class="col-md-6 col-sm-12 col-sm-12">
-                                            <div class="screenshot-holder">
-                                                <a href="../assets/images/5.5/12.png" data-title="Log Viewer Logs" data-toggle="lightbox" class="hoverZoomLink"><img class="img-responsive" src="../assets/images/5.5/12.png" alt="screenshot"></a>
-                                                <a class="mask hoverZoomLink" href="../assets/images/5.5/12.png" data-title="Log Viewer Logs" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
-                                            </div> 
-                                        </div>
-
-                                        <div class="col-md-6 col-sm-12 col-sm-12">
-                                            <div class="screenshot-holder">
-                                                <a href="../assets/images/5.5/13.png" data-title="Log Viewer Details" data-toggle="lightbox" class="hoverZoomLink"><img class="img-responsive" src="../assets/images/5.5/13.png" alt="screenshot"></a>
-                                                <a class="mask hoverZoomLink" href="../assets/images/5.5/13.png" data-title="Log Viewer Details" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
-                                            </div> 
-                                        </div>
-
-                                        <div class="col-md-6 col-sm-12 col-sm-12">
-                                            <div class="screenshot-holder">
-                                                <a href="../assets/images/5.5/14.png" data-title="Log Viewer Details" data-toggle="lightbox" class="hoverZoomLink"><img class="img-responsive" src="../assets/images/5.5/14.png" alt="screenshot"></a>
-                                                <a class="mask hoverZoomLink" href="../assets/images/5.5/14.png" data-title="Log Viewer Details" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
-                                            </div> 
-                                        </div>
-
-                                        <div class="col-md-6 col-sm-12 col-sm-12">
-                                            <div class="screenshot-holder">
-                                                <a href="../assets/images/5.5/15.png" data-title="Log Viewer Details" data-toggle="lightbox" class="hoverZoomLink"><img class="img-responsive" src="../assets/images/5.5/15.png" alt="screenshot"></a>
-                                                <a class="mask hoverZoomLink" href="../assets/images/5.5/15.png" data-title="Log Viewer Details" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
+                                                <a href="https://camo.githubusercontent.com/4da267766ad9a79696f8baf988115005ba8bfa9e/68747470733a2f2f7332382e706f7374696d672e6f72672f706678686e716367642f73637265656e73686f745f32303137303831315f3135303331332e706e67" data-title="Menu Manager" data-toggle="lightbox" class="hoverZoomLink"><img class="img-responsive" src="https://camo.githubusercontent.com/4da267766ad9a79696f8baf988115005ba8bfa9e/68747470733a2f2f7332382e706f7374696d672e6f72672f706678686e716367642f73637265656e73686f745f32303137303831315f3135303331332e706e67" alt="screenshot"></a>
+                                                <a class="mask hoverZoomLink" href="https://camo.githubusercontent.com/4da267766ad9a79696f8baf988115005ba8bfa9e/68747470733a2f2f7332382e706f7374696d672e6f72672f706678686e716367642f73637265656e73686f745f32303137303831315f3135303331332e706e67" data-title="Menu Manager" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
                                             </div> 
                                         </div>
 
@@ -250,9 +174,9 @@
                             <section id="download-section" class="doc-section">
                                 <h2 class="section-title">Download</h2>
                                 <div class="section-block">
-                                    <a href="https://github.com/rappasoft/laravel-5-boilerplate" class="btn btn-green" target="_blank"><i class="fa fa-github"></i> View on GitHub</a>
+                                    <a href="https://github.com/dandisy/webcore" class="btn btn-green" target="_blank"><i class="fa fa-github"></i> View on GitHub</a>
 
-                                    <a href="https://github.com/rappasoft/laravel-5-boilerplate/archive/master.zip" class="btn btn-green" target="_blank"><i class="fa fa-download"></i> Download Laravel Boilerplate</a>
+                                    <a href="https://github.com/dandisy/webcore/archive/1.0.1.zip" class="btn btn-green" target="_blank"><i class="fa fa-download"></i> Download Webcore Platform</a>
                                 </div>
                             </section><!--//doc-section-->
 
@@ -260,7 +184,15 @@
                                 <h2 class="section-title">Installation</h2>
                                 <div id="step1"  class="section-block">
                                     <h3 class="block-title">1. Download</h3>
-                                    <p>Download the files above and place on your server. (This project was developed on <a href="https://laravel.com/docs/master/homestead" target="_blank">Laravel Homestead</a> and I highly recommend you use either that or <a href="https://laravel.com/docs/master/valet" target="_blank">Laravel Valet</a>, to get the optimal server configuration and no errors through installation.)</p>
+                                    <p>Download the files above and place on your server.</p>
+                                    <p>Or if you using git, clone github repository to your server, by run this command</p>
+                                    <div class="code-block">
+                                        <p><code>git clone https://github.com/dandisy/webcore.git</code></p>
+                                    </div>
+                                    <p>Or using composer can skip some laravel setup project (recommedated)</p>
+                                    <div class="code-block">
+                                        <p><code>composer create-project dandisy/webcore {your-project-name}</code></p>
+                                    </div>
                                 </div><!--//section-block-->
                                 
                                 <div id="step2"  class="section-block">
@@ -313,7 +245,7 @@
                                     <p>Change these lines to reflect your new database settings.</p>
                                 </div><!--//section-block-->
 
-                                <div id="step6"  class="section-block">
+                                <div id="step6" class="section-block">
                                     <h3 class="block-title">6. Artisan Commands</h3>
                                     <p>The first thing we are going to so is set the key that Laravel will use when doing encryption.</p>
 
@@ -344,49 +276,204 @@
                                     </div><!--//code-block-->
 
                                     <p>You should get a message for each file seeded, you should see the information in your database tables.</p>
-                                </div><!--//section-block-->
 
-                                <div id="step7"  class="section-block">
-                                    <h3 class="block-title">7. NPM Run '*'</h3>
-                                    <p>Now that you have the database tables and default rows, you need to build the styles and scripts.</p>
-
-                                    <p>These files are generated using <a href="https://laravel.com/docs/5.5/mix" target="_blank">Laravel Mix</a>, which is a wrapper around many tools, and works off the <strong>webpack.mix.js</strong> in the root of the project.</p>
-
-                                    <p>You can build with:</p>
+                                    <p>Then create storage symbolic link with:</p>
 
                                     <div class="code-block">
-                                        <p><code>npm run &lt;command&gt;</code></p>
+                                        <p><code>php artisan storage:link</code></p>
                                     </div><!--//code-block-->
-                                    
-                                    <p>The available commands are listed at the top of the package.json file under the 'scripts' key.</p>
 
-                                    <p>You will see a lot of information flash on the screen and then be provided with a table at the end explaining what was compiled and where the files live.</p>
-
-                                    <p>At this point you are done, you should be able to hit the project in your local browser and see the project, as well as be able to log in with the administrator and view the backend.</p>
-                                </div><!--//section-block-->
-
-                                <div id="step8"  class="section-block">
-                                    <h3 class="block-title">8. PHPUnit</h3>
-                                    <p>After your project is installed, make sure you run the test suite to make sure all of the parts are working correctly. From the root of your project run:</p>
-
+                                    <p><b>OPTIONAL</b></p>
+                                    <p>
+                                        if you want to activate oauth, edit the uri oauth in vue files in <br>
+                                        resources/assets/js/components/passport
+                                    </p>
                                     <div class="code-block">
-                                        <p><code>phpunit</code></p>
-                                    </div><!--//code-block-->
+                                        <p><code>php artisan passport:keys</code></p>
+                                        <p><code>npm install</code></p>
+                                        <p><code>npm run dev</code></p>
+                                    </div>
+                                    <p>
+                                        then you can access oauth admin panel, to manage your oauth client in <br>
 
-                                    <p>You will see a dot(.) appear for each of the hundreds of tests, and then be provided with the amount of passing tests at the end. There should be no failures with a fresh install.</p>
+                                        http://localhost/webcore/public/oauth-admin
+                                    </p>
                                 </div><!--//section-block-->
 
-                                <div id="step8"  class="section-block">
-                                    <h3 class="block-title">9. Login</h3>
+                                <div id="step7" class="section-block">
+                                    <h3 class="block-title">7. Login</h3>
                                     <p>After your project is installed and you can access it in a browser, click the login button on the right of the navigation bar.</p>
-                                    <p>The administrator credentials are:</p>
+                                    <p>The default credentials are:</p>
 
                                     <div class="code-block">
-                                        <p><strong>Username:</strong> admin@admin.com</p>
-                                        <p><strong>Password:</strong> 1234</p>
+                                        <p><strong>Username:</strong> superadministrator@app.com / adminstrator@app.com / user@app.com</p>
+                                        <p><strong>Password:</strong> password</p>
                                     </div><!--//code-block-->
 
                                     <p>You will be automatically redirected to the backend. If you changed these values in the seeder prior, then obviously use the ones you updated to.</p>
+                                </div><!--//section-block-->
+                            </section><!--//doc-section-->
+
+                            <section id="usage-section" class="doc-section">
+                                <h2 class="section-title">Usage</h2>
+
+                                <div id="step10" class="section-block">
+                                    <h3 class="block-title">1. As Laravel Admin Panel</h3>
+
+                                    <p>To generate laravel code interactively</p>
+                                    <div class="code-block">
+                                        <p>
+                                            <code>php artisan generate:api_scaffold {YourModelName} --datatables=true</code>
+                                        </p>
+                                    </div>
+
+                                    <p>or if you already have model schema json file</p>
+                                    <div class="code-block">
+                                        <p>
+                                            <code>php artisan generate:api_scaffold {YourModelName} --fieldsFile=YourModelName.json --datatables=true</code>
+                                        </p>
+                                    </div>
+                                </div><!--//section-block-->
+
+                                <div id="step11" class="section-block">
+                                    <h3 class="block-title">2. As Laravel Web CMS</h3>
+
+                                    <p>Run these command in your console</p>
+                                    <div class="code-block">
+                                        <p>
+                                            <code>php artisan generate:api_scaffold Page --fieldsFile=Page.json --datatables=true --prefix=admin --logs</code>
+                                        </p>
+                                        <p>
+                                            <code>php artisan generate:api_scaffold Post --fieldsFile=Post.json --datatables=true --prefix=admin --logs</code>
+                                        </p>
+                                    </div>
+
+                                    <p>Then</p>
+                                    <div class="code-block">
+                                        <p>
+                                            <code>composer require dandisy/webcore-page:dev-master</code>
+                                        </p>
+                                        <p>
+                                            <code>php artisan vendor:publish --provider="Webcore\Page\PageServiceProvider" --tag=config</code>
+                                        </p>
+                                    </div>
+                                    <p>
+                                        If you want Webcore Page System themes & components code sample <br>
+
+                                        download in <a href="https://github.com/dandisy/themes" target="_blank">https://github.com/dandisy/themes</a> (don't clone)
+                                        <br>
+
+                                        then extract to your project root directory <br>
+
+                                        see <a href="https://github.com/dandisy/webcore-page" target="_blank">https://github.com/dandisy/webcore-page</a> for more info
+                                    </p>
+                                    <p>then run</p>
+                                    <div class="code-block">
+                                        <p>
+                                            <code>composer require dandisy/webcore-menu:dev-master</code>
+                                        </p>
+                                        <p>
+                                            <code>php artisan vendor:publish --provider="Harimayco\Menu\MenuServiceProvider"</code>
+                                        </p>
+                                        <p>
+                                            <code>php artisan vendor:publish --provider="Webcore\Menu\MenuServiceProvider" --tag=models</code>
+                                        </p>
+                                        <p>
+                                            <code>php artisan migrate</code>
+                                        </p>
+                                    </div>
+                                    <p>see <a href="https://github.com/dandisy/webcore-menu" target="_blank">"https://github.com/dandisy/webcore-menu</a> for more info</p>
+                                </div><!--//section-block-->
+
+                                <div id="step12" class="section-block">
+                                    <h3 class="block-title">3. Laravel Web CMS with Webcore Frontpage System</h3>
+
+                                    <p>
+                                        Webcore frontpage system implement component based frontpage,
+                                        to use component, you must define data source of component,
+                                        then place the component to some template position in page presentation. <br>
+                                        Run these command in your console
+                                    </p>
+                                    <div class="code-block">
+                                        <p>
+                                            <code>php artisan generate:api_scaffold DataColumn --fieldsFile=DataColumn.json --datatables=true --prefix=admin --logs</code>
+                                        </p>
+                                        <p>
+                                            <code>php artisan generate:api_scaffold DataQuery --fieldsFile=DataQuery.json --datatables=true --prefix=admin --logs</code>
+                                        </p>
+                                        <p>
+                                            <code>php artisan generate:api_scaffold DataSource --fieldsFile=DataSource.json --datatables=true --prefix=admin --logs</code>
+                                        </p>
+                                        <p>
+                                            <code>php artisan generate:api_scaffold Component --fieldsFile=Component.json --datatables=true --prefix=admin --logs</code>
+                                        </p>
+                                        <p>
+                                            <code>php artisan generate:api_scaffold Presentation --fieldsFile=Presentation.json --datatables=true --prefix=admin --logs</code>
+                                        </p>
+                                    </div>
+                                </div><!--//section-block-->
+
+                                <div id="step13" class="section-block">
+                                    <h3 class="block-title">4. Webcore with Content Personalization</h3>
+
+                                    <p>
+                                        Webcore personalization system collect and use user behaviour when visiting webcore frontpage to personalize content,
+                                        to define content personalization, you must define pattern and implement the pattern to component or user persona <br>
+                                        Run these command in your console
+                                    </p>
+                                    <div class="code-block">
+                                        <p>
+                                            <code>php artisan generate:api_scaffold Pattern --fieldsFile=Pattern.json --datatables=true --prefix=admin --logs</code>
+                                        </p>
+                                        <p>
+                                            <code>php artisan generate:api_scaffold PatternCard --fieldsFile=PatternCard.json --datatables=true --prefix=admin --logs</code>
+                                        </p>
+                                        <p>
+                                            <code>php artisan generate:api_scaffold Persona --fieldsFile=Persona.json --datatables=true --prefix=admin --logs</code>
+                                        </p>
+                                        <p>
+                                            <code>php artisan generate:api_scaffold Personalization --fieldsFile=Personalization.json --datatables=true --prefix=admin --logs</code>
+                                        </p>
+                                    </div>
+                                </div><!--//section-block-->
+                            </section><!--//doc-section-->
+
+                            <section id="dependencies-section" class="doc-section">
+                                <h2 class="section-title">Dependencies</h2>
+
+                                <div class="section-block">
+                                    <p>Dependencies</p>
+                                    <ul>
+                                        <li>dandisy/adminlte-templates based on infyomlabs/adminlte-templates</li>
+                                        <li>dandisy/laravel-generator based on infyomlabs/laravel-generator</li>
+                                        <li>dandisy/swagger-generator based on infyomlabs/swagger-generator</li>
+                                        <li>dandisy/filemanager based on infinety-es/filemanager</li>
+
+                                        <li>dandisy/webcore-page</li>
+                                        <li>dandisy/webcore-menu</li>
+
+                                        <li>arrilot/laravel-widgets</li>
+                                        <li>barryvdh/laravel-debugbar</li>
+                                        <li>league/glide-laravel</li>
+                                        <li>santigarcor/laratrust</li>
+                                        <li>harimayco/laravel-menu</li>
+                                        <li>atayahmet/laravel-nestable</li>
+
+                                        <li>ixudra/curl</li>
+
+                                        <li>barryvdh/laravel-dompdf or seguce92/laravel-dompdf</li>
+                                        <li>maatwebsite/excel</li>
+
+                                        <li>pragmarx/tracker or jeremykenedy/laravel-logger</li>
+                                        <li>spatie/laravel-activitylog</li>
+
+                                        <li>fireguard/report or jimmyjs/laravel-report-generator</li>
+                                    </ul>
+
+                                    <p>If you activated laravel passport use :</p>
+                                    <ul>
+                                        <li>spatie/laravel-cors</li>
+                                    </ul>
                                 </div><!--//section-block-->
                             </section><!--//doc-section-->
 
@@ -394,7 +481,7 @@
                                 <h2 class="section-title">What's Next?</h2>
 
                                 <div class="section-block">
-                                    <p>At this point you have all that you need, you can browse the code base and build the rest of your application the way you normally would. Or you can visit the <a href="../5.5/documentation.html">documentation</a> to get a really good grasp on what's going on behind the scenes.</p>
+                                    <p>At this point you have all that you need, you can browse the code base and build the rest of your application the way you normally would. Or you can visit the <a href="../1.0.1/documentation.html">documentation</a> to get a really good grasp on what's going on behind the scenes.</p>
                                 </div><!--//section-block-->
                              </section><!--//doc-section-->
                         </div><!--//content-inner-->
@@ -406,6 +493,8 @@
                                 <li><a class="scrollto" href="#screenshots-section">Screenshots</a></li>
                                 <li><a class="scrollto" href="#download-section">Download</a></li>
                                 <li><a class="scrollto" href="#installation-section">Installation</a></li>
+                                <li><a class="scrollto" href="#usage-section">Usage</a></li>
+                                <li><a class="scrollto" href="#dependencies-section">Dependencies</a></li>
                                 <li><a class="scrollto" href="#whatsnext-section">What's Next?</a></li>
                             </ul><!--//doc-menu-->
                         </nav>

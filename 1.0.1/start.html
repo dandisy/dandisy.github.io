@@ -83,7 +83,7 @@
                                             Image Manipulation <br>
                                             to implement image manipulation use url params, ie http://localhost/webcore/public/img/{path}?{param=value} <br>
                                             default {path} is configured relative to public_path, <br>
-                                            see .env for <code>FILESYSTEM_DRIVER</code> and config/filesystems.php <br>
+                                            see .env for <b>FILESYSTEM_DRIVER</b> and config/filesystems.php <br>
                                             please check <a href="http://glide.thephpleague.com" target="_blank">Glide documentation</a> for manual guide
                                         </li>
                                         <li>
@@ -103,14 +103,18 @@
                                             see example of model schema files in resources/model_schemas
                                         </li>
                                         <li>
-                                            Page System (support themes, template position and view components) <br>
+                                            Front Page System (support themes, template position and view components) <br>
                                             Code Sample can be download in <a href="https://github.com/dandisy/themes" target="_blank">https://github.com/dandisy/themes</a>
                                         </li>
                                         <li>
                                             Reusable Component
                                             <ul>
                                                 <li>
-                                                    using Widget (Widget Class & Widget View) using arrilot/laravel-widgets for UI Component
+                                                    Using Webcore Component Presentation System for Font Page Component <br>
+                                                    Code Sample can be download in <a href="https://github.com/dandisy/themes" target="_blank">https://github.com/dandisy/themes</a>
+                                                </li>
+                                                <li>
+                                                    Using Widget (Widget Class & Widget View) using arrilot/laravel-widgets for UI Component
                                                     <br>
                                                     as much as possible the widget should have a loose coupled, bring data on the fly, avoid directly include / use in widget class
                                                     <br>
@@ -119,13 +123,13 @@
                                                     [source=ModelName,where=any_field_name:value,position:any_theme_position,widget=any_widget_view]
                                                 </li>
                                                 <li>
-                                                    using Laravel Package <br>
+                                                    Using Laravel Package <br>
                                                     webcore include webcore-microsite package as code sample for basic package
                                                 </li>
                                             </ul>
                                         </li>
                                         <li>
-                                            Pre Configured Oauth using Laravel Passport (with RESTAPI resources example)
+                                            Pre Configured Oauth using Laravel Passport (with Elorest as Laravel eloquent RESTAPI package see https://github.com/dandisy/elorest)
                                             <ul>
                                                 <li>
                                                     to login use http://localhost/webcore/public/oauth/token <br>

@@ -187,7 +187,7 @@
                                     <div class="code-block">
                                         <p><code>git clone https://github.com/dandisy/webcore.git</code></p>
                                     </div>
-                                    <p>Or using composer can skip some laravel setup project (recommedated)</p>
+                                    <p>Or using composer can skip some laravel setup project (recommendated)</p>
                                     <div class="code-block">
                                         <p><code>composer create-project dandisy/webcore {your-project-name}</code></p>
                                     </div>
@@ -214,12 +214,14 @@
 
                                     <div class="code-block">
                                         <p>
-                                            <code>DB_CONNECTION=mysql<br/>
-                                            DB_HOST=127.0.0.1<br/>
-                                            DB_PORT=3306<br/>
-                                            DB_DATABASE=homestead<br/>
-                                            DB_USERNAME=homestead<br/>
-                                            DB_PASSWORD=secret</code>
+                                            <code>
+                                                DB_CONNECTION=mysql<br/>
+                                                DB_HOST=127.0.0.1<br/>
+                                                DB_PORT=3306<br/>
+                                                DB_DATABASE=webcore<br/>
+                                                DB_USERNAME=non_root<br/>
+                                                DB_PASSWORD=secret
+                                            </code>
                                         </p>
                                     </div><!--//code-block-->
 
@@ -270,7 +272,7 @@
 
                                     <p>
                                         If you want to activate oauth, edit the uri oauth in vue files in <br>
-                                        resources/assets/js/components/passport
+                                        resources/assets/js/components/passport, then run this artisan command
                                     </p>
 
                                     <div class="code-block">
@@ -291,12 +293,14 @@
                                         <p><code>yarn</code></p>
                                     </div><!--//code-block-->
 
+                                    <p>then,</p>
+
                                     <div class="code-block"></div>
                                         <p><code>npm run dev</code></p>
                                     </div><!--//code-block-->
 
                                     <p>
-                                        then you can access oauth admin panel, to manage your oauth client in <br>
+                                        Now you can access oauth admin panel, to manage your oauth client in <br>
                                         http://localhost/webcore/public/oauth-admin
                                     </p>
                                 </div><!--//section-block--> 

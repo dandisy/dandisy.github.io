@@ -104,7 +104,7 @@
                                                     <br>
                                                     webcore include a widget, with this you able to use shortcode on Page description field
                                                     to get datasource from models, use syntax : <br>
-                                                    [source=ModelName,where=some_field_name:value,position:some_theme_position,widget=some_widget_view]
+                                                    [source=ModelName,where=any_field_name:value,position:any_theme_position,widget=any_widget_view]
                                                 </li>
                                                 <li>
                                                     using Laravel Package <br>
@@ -204,27 +204,10 @@
                                     <div class="code-block">
                                         <p><code>composer install</code></p>
                                     </div><!--//code-block-->
-                                </div><!--//section-block-->
+                                </div><!--//section-block-->                             
 
                                 <div id="step4"  class="section-block">
-                                    <h3 class="block-title">4. NPM/Yarn</h3>
-                                    <p>In order to install the Javascript packages for frontend development, you will need the <a href="https://www.npmjs.com/" target="_blank">Node Package Manager</a>, and optionally the <a href="https://code.facebook.com/posts/1840075619545360" target="_blank">Yarn Package Manager</a> by Facebook (Recommended)</p>
-
-                                    <p>If you only have NPM installed you have to run this command from the root of the project:</p>
-
-                                    <div class="code-block">
-                                        <p><code>npm install</code></p>
-                                    </div><!--//code-block-->
-
-                                    <p>If you have Yarn installed, run this instead from the root of the project:</p>
-
-                                    <div class="code-block">
-                                        <p><code>yarn</code></p>
-                                    </div><!--//code-block-->
-                                </div><!--//section-block-->                              
-
-                                <div id="step5"  class="section-block">
-                                    <h3 class="block-title">5. Create Database</h3>
+                                    <h3 class="block-title">4. Create Database</h3>
                                     <p>You must create your database on your server and on your <strong>.env</strong> file update the following lines:</p>
 
                                     <div class="code-block">
@@ -241,8 +224,8 @@
                                     <p>Change these lines to reflect your new database settings.</p>
                                 </div><!--//section-block-->
 
-                                <div id="step6" class="section-block">
-                                    <h3 class="block-title">6. Artisan Commands</h3>
+                                <div id="step5" class="section-block">
+                                    <h3 class="block-title">5. Artisan Commands</h3>
                                     <p>The first thing we are going to so is set the key that Laravel will use when doing encryption.</p>
 
                                     <div class="code-block">
@@ -278,23 +261,43 @@
                                     <div class="code-block">
                                         <p><code>php artisan storage:link</code></p>
                                     </div><!--//code-block-->
+                                </div><!--//section-block-->
 
-                                    <p><b>OPTIONAL</b></p>
+                                <div id="step6"  class="section-block">
+                                    <h3 class="block-title">6. Laravel Passport (OPTIONAL)</h3>
+
                                     <p>
-                                        if you want to activate oauth, edit the uri oauth in vue files in <br>
+                                        If you want to activate oauth, edit the uri oauth in vue files in <br>
                                         resources/assets/js/components/passport
                                     </p>
+
                                     <div class="code-block">
                                         <p><code>php artisan passport:keys</code></p>
-                                        <p><code>npm install</code></p>
-                                        <p><code>npm run dev</code></p>
                                     </div>
+
+                                    <p>In order to install the Javascript packages for frontend development, you will need the <a href="https://www.npmjs.com/" target="_blank">Node Package Manager</a>, and optionally the <a href="https://code.facebook.com/posts/1840075619545360" target="_blank">Yarn Package Manager</a> by Facebook (Recommended)</p>
+
+                                    <p>If you only have NPM installed you have to run this command from the root of the project:</p>
+
+                                    <div class="code-block">
+                                        <p><code>npm install</code></p>
+                                    </div><!--//code-block-->
+
+                                    <p>If you have Yarn installed, run this instead from the root of the project:</p>
+
+                                    <div class="code-block">
+                                        <p><code>yarn</code></p>
+                                    </div><!--//code-block-->
+
+                                    <div class="code-block"></div>
+                                        <p><code>npm run dev</code></p>
+                                    </div><!--//code-block-->
+
                                     <p>
                                         then you can access oauth admin panel, to manage your oauth client in <br>
-
                                         http://localhost/webcore/public/oauth-admin
                                     </p>
-                                </div><!--//section-block-->
+                                </div><!--//section-block--> 
 
                                 <div id="step7" class="section-block">
                                     <h3 class="block-title">7. Login</h3>
@@ -410,7 +413,7 @@
                                 </div><!--//section-block-->
 
                                 <div id="step13" class="section-block">
-                                    <h3 class="block-title">4. Webcore with Content Personalization</h3>
+                                    <h3 class="block-title">4. Webcore with Content Personalization (BETA)</h3>
 
                                     <p>
                                         Webcore personalization system collect and use user behaviour when visiting webcore frontpage to personalize content,

@@ -400,26 +400,26 @@
                                     <h3 class="block-title">3. Laravel Web CMS with Webcore Front Page System</h3>
 
                                     <p>
-                                        Webcore front page system implement component based frontpage,
+                                        Webcore front page system implement component based front page,
                                         to use component, you must define data source of component,
-                                        then place the component to some template position in page presentation. <br>
-                                        Run these command in your console
+                                        then place the component to any template position in page presentation. <br>
+                                        For preparing webcore front page system, run these artisan commands
                                     </p>
                                     <div class="code-block">
                                         <p>
-                                            <code>php artisan generate:api_scaffold DataColumn --fieldsFile=DataColumn.json --datatables=true --prefix=admin --logs</code>
-                                        </p>
-                                        <p>
-                                            <code>php artisan generate:api_scaffold DataQuery --fieldsFile=DataQuery.json --datatables=true --prefix=admin --logs</code>
-                                        </p>
-                                        <p>
-                                            <code>php artisan generate:api_scaffold DataSource --fieldsFile=DataSource.json --datatables=true --prefix=admin --logs</code>
+                                            <code>php artisan generate:api_scaffold Presentation --fieldsFile=Presentation.json --datatables=true --prefix=admin --logs</code>
                                         </p>
                                         <p>
                                             <code>php artisan generate:api_scaffold Component --fieldsFile=Component.json --datatables=true --prefix=admin --logs</code>
                                         </p>
                                         <p>
-                                            <code>php artisan generate:api_scaffold Presentation --fieldsFile=Presentation.json --datatables=true --prefix=admin --logs</code>
+                                            <code>php artisan generate:api_scaffold DataSource --fieldsFile=DataSource.json --datatables=true --prefix=admin --logs</code>
+                                        </p>
+                                        <p>
+                                            <code>php artisan generate:api_scaffold DataQuery --fieldsFile=DataQuery.json --datatables=true --prefix=admin --logs</code>
+                                        </p>
+                                        <p>
+                                            <code>php artisan generate:api_scaffold DataColumn --fieldsFile=DataColumn.json --datatables=true --prefix=admin --logs</code>
                                         </p>
                                     </div>
                                 </div><!--//section-block-->
